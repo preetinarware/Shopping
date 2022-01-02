@@ -1,0 +1,45 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+    {% block style %}<link rel="stylesheet" href="{% static 'style.css' %}">{% endblock %}
+{% block body %}
+
+        <!--Header Start -->
+        <!--Header End-->
+        <!-- Content Section Start -->
+       <div class="main-container">
+            <!-- About Section Start -->
+           <section id="accessories" class="accessories-section pb-0" style="padding-top: 140px;">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="col-md-10 offset-md-1 text-center">
+                             {% for i in tite %}<div>
+                            <div class="heading-wrapper">
+                                <h2 class="text-uppercase">{{i.title}} </h2>
+                            </div>
+                          <div class="text-block text-lead">{{i.content}}
+                               </div></div>{%endfor%}
+<!--      Our company key objective is creating and facilitating electric mobility across the country.-->
+<!--       Our mission to create electric vehicles that can drive our present towards a sustainable future.-->
+
+
+                            <div class="btn-wrapper">
+                                <a href="/contact" class="btn btn-primary has-icon"><span>Contact Us </span><i class="fas fa-arrow-right"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <img src="{% static 'images/accessories-bg.png' %}" alt="">
+            </section>
+       </div>
+        <!-- Content Section End -->
+        <!--footer Start-->
+
+        <!--footer end-->
+
+    <!--Main Wrapper End-->
+    <!-- Vendor -->
+
+
+{% endblock %}

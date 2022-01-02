@@ -1,0 +1,103 @@
+{% extends 'basic.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'style.css' %}">{% endblock %}
+{% block body %}
+
+
+<br><br><br><br><br><br><br><br><br>
+<div class="row mt-30 mx-5 ">
+    <div class="col-md-4 order-md-2 mb-4">
+        <h4 class="d-flex justify-content-between align-items-center mb-3">
+            <span class="text-muted">Your cart</span>
+        </h4>
+
+        <ul class="list-group mb-3">
+            {% for datas,qtys ,price in list %}
+
+            <li class="list-group-item d-flex justify-content-between lh-condensed">
+                <div class="w-20">
+                    <img alt="ecommerce" class="img-fluid product-img" src='/media/{{datas.img}}'>
+                </div>
+                <div>
+                    <h6 class="my-0">{{datas.name}}</h6>
+                    <small class="text-muted">{{datas.price}} /-</small>
+                </div>
+                <div>
+                    <h6 class="my-0">Quntity</h6>
+                    <small class="text-muted">{{qtys}}</small>
+                </div>
+                <div>
+                    <h6 class="my-0"> Price</h6>
+                    <small class="text-muted">{{price}} /-</small>
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+        <ul>
+            <li class="list-group-item d-flex justify-content-between">
+                <span>Total price</span>
+                <strong>Rs. {{totl}} /-</strong>
+            </li>
+        </ul>
+
+        <form class="card p-2">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Promo code">
+                <div class="input-group-append">
+                    <button type="submit" class="btn btn-secondary">Redeem</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+
+    <div class="col-md-8 order-md-1">
+        <form action="/orderplace" method="POST">
+            {% csrf_token %}<br>
+            <h2 class="mb-3">Billing address</h2>
+            <form>
+                <div class="form-row">
+                    <div class="form-group col-lg-6 col-sm-6">Name
+                        <input type="text" class="form-control" name="name" id="inputYourName" placeholder="Your Name">
+                    </div>
+                    <div class="form-group col-lg-6 col-sm-6">Moblie No.
+                        <input type="number" class="form-control" id="phone" name="contact_no"
+                               placeholder="Contact Number">
+                    </div>
+                    <div class="form-group col-lg-6 col-sm-6">Pincode
+                        <input type="number" class="form-control" name="pincode" id="pin" placeholder="enter pin">
+                    </div>
+                    <div class="form-group col-lg-6 col-sm-6">Address line1
+                        <input type="text" class="form-control" name="addres1" id="add1" placeholder="Address1">
+                    </div>
+                    <div class="form-group col-lg-6 col-sm-6">Address line2
+                        <input type="text" class="form-control" name="addres2" id="add2" placeholder="Address2">
+                    </div>
+                    <!--               <div class="form-group col-lg-6 col-sm-6">product name-->
+                    <!--        <ul class="list-group mb-3">-->
+                    <!--            {% for datas in list %}-->
+                    <!--        <li class="list-group-item d-flex justify-content-between lh-condensed">-->
+                    <!--            <div>-->
+                    <!--                <h6 class="my-0">{{datas.name}}</h6></div>-->
+                    <!--&lt;!&ndash;                       <div  class="form-control" name="prodname" id="prod" placeholder="Address2"></div></>&ndash;&gt;-->
+                    <!--           {% endfor%}</ul>-->
+                    <!--                                        </div>-->
+
+
+                    <!--               <div class="form-group col-lg-6 col-sm-6">Time-->
+                    <!--                                            <input type="text" class="form-control" name="addres1" id="add1" placeholder="Address1">-->
+                    <!--                                        </div>-->
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-12">
+                        <input type="submit" value="Place Order" class="btn btn-primary border-btn">
+                    </div>
+                </div>
+            </form>
+
+        </form>
+    </div>
+</div>
+{% endblock %}

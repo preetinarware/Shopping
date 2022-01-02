@@ -1,0 +1,303 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static%}
+
+    {% block style %}<link rel="stylesheet" href="{% static 'style.css' %}">{% endblock %}
+
+       <div class="main-container">
+            <!-- About Section Start -->
+           <section id="contact" class="contact-section" style="padding-top: 90px;">
+                <div class="section-background m-bg-hide">
+                    <div class="background-wrapper">
+                        <div class="background-inner" style="background-image: urls('images/bg-3.png'); background-repeat: no-repeat;background-position: center right; background-size:auto;"></div>
+                    </div>
+                </div>
+
+    <div class="container mx-auto" style="margin-top: 100px;">
+      <div class="row">
+
+        <div class="col-lg-6">
+          <div class="d-flex flex-column color-section-tool">
+            <img src="images/slicer-bicycle-1.png" onclick="setColorYellow()" alt="">
+            <img src="images/slicer-bicycle-2.png" onclick="setColorRed()" alt="">
+            <img src="images/slicer-bicycle-3.png" onclick="setColorBlue()" alt="">
+          </div>
+
+          <img alt="ecommerce" class="img-fluid product-img" src="/media/{{title.img}}">
+          <div class="d-flex flex-wrap px-4 buttons">
+            <div class="buy-options">
+              <button><a href="/Cart"> Add To Cart</a></button>
+            </div>
+            <div class="buy-options">
+              <button>Buy Now</button>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 px-4">
+          <h2 class="text-sm title-font font-bold text-gray-500 tracking-widest">EVEX</h2>
+          <h1 class="text-gray-900 text-3xl title-font font-medium mb-1">{{title.name}}</h1>
+          <div class="flex">
+
+            <span class="flex items-center">
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <svg fill="currentColor" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                stroke-width="2" class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4 text-red-500" viewBox="0 0 24 24">
+                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z">
+                </path>
+              </svg>
+              <span class="text-gray-600 ml-3">4 Reviews</span>
+            </span>
+            <span class="flex ml-3 pl-3 py-2 border-l-2 border-gray-200">
+              <a class="text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"></path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M23 3a10.9 10.9 0 01-3.14 1.53 4.48 4.48 0 00-7.86 3v1A10.66 10.66 0 013 4s-4 9 5 13a11.64 11.64 0 01-7 2c9 5 20 0 20-11.5a4.5 4.5 0 00-.08-.83A7.72 7.72 0 0023 3z">
+                  </path>
+                </svg>
+              </a>
+              <a class="ml-2 text-gray-500">
+                <svg fill="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" class="w-5 h-5"
+                  viewBox="0 0 24 24">
+                  <path
+                    d="M21 11.5a8.38 8.38 0 01-.9 3.8 8.5 8.5 0 01-7.6 4.7 8.38 8.38 0 01-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 01-.9-3.8 8.5 8.5 0 014.7-7.6 8.38 8.38 0 013.8-.9h.5a8.48 8.48 0 018 8v.5z">
+                  </path>
+                </svg>
+              </a>
+            </span>
+          </div>
+          <div class="price mb-2">
+            <span class="mr-3 mb-4 font-bold"><span style="font-size: x-large;">
+              {{title.price}}</span> &nbsp;
+              <strike style="opacity: 0.5;">
+                <i style="font-size: 14px;"></i></strike></span>
+
+            <span style="color: green; font-weight: bold; font-style: italic;">3% Off</span>
+          </div>
+          <br>
+          <p class="text-justify  leading-relaxed">{{title.desc}}</p>
+
+
+          <div class=" mt-6 items-center pb-5 border-b-2 border-gray-200 mb-5">
+
+            <span
+              class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+              <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                class="w-4 h-4" viewBox="0 0 24 24">
+                <path d="M6 9l6 6 6-6"></path>
+              </svg>
+            </span>
+          </div>
+          <div class="reletive">
+            <div class="flex ml-6 items-center">
+              <span class="mr-3">Select Capacity</span>
+              <div class="relative">
+                <select
+                  class="rounded border appearance-none border-gray-400 py-2 focus:outline-none focus:border-red-500 text-base pl-3 pr-10">
+                  <option>24AH/48V</option>
+                  <option>30AH/48V</option>
+                  <option>30AH/60V</option>
+                  <option>40AH/60V</option>
+                </select>
+                <span
+                  class="absolute right-0 top-0 h-full w-10 text-center text-gray-600 pointer-events-none flex items-center justify-center">
+                  <svg fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    class="w-4 h-4" viewBox="0 0 24 24">
+                    <path d="M6 9l6 6 6-6"></path>
+                  </svg>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+           </section>
+
+
+            <section id="technical" style="padding: 20px 0;" class="specifications-section gray-bg">
+                <div class="section-background">
+                    <div class="background-wrapper" style="margin: 0;">
+                        <div class="background-inner" style="background-color: #0e0e0e; margin: 0;"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="heading-wrapper" style="margin: 0;">
+                                <h2 class="large-heading text-uppercase fut3" style="margin: 0;">
+                                    <span>Sprint++</span>Specifications
+                                </h2>
+                            </div>
+                        </div>
+                        <div class="col-md-12">
+                            <div class="tab-section vertical-tab m-top-30">
+                                <!-- Nav tabs -->
+                                <div class="select-f">
+                                <div class="close-btn"><i class="fa fa-times"></i></div>ilter fut">SPECIFICATIONS</div>
+                                <ul class="nav nav-tabs text-uppercase" role="tablist">
+                                    <li class="nav-item">
+                                        <span class="nav-link active fut" id="engine-tab" data-toggle="tab"
+                                            href="#engine" role="tab" aria-controls="engine"
+                                            aria-selected="true">SPECIFICATIONS</span>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <span class="nav-link fut" id="suspension-tab" data-toggle="tab"
+                                            href="#suspension" role="tab" aria-controls="suspension"
+                                            aria-selected="false">ACCESSORIES</span>
+                                    </li>
+                                    <li class="nav-item">
+                                        <span class="nav-link fut" id="transmission-tab" data-toggle="tab"
+                                            href="#transmission" role="tab" aria-controls="transmission"
+                                            aria-selected="false">KEY FEATURES</span>
+                                    </li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <div class="tab-pane active" id="engine" role="tabpanel"
+                                        aria-labelledby="engine-tab">
+                                        <h3 class="tab-title fut">SPECIFICATIONS</h3>
+                                        <table class="specifications fut2">
+
+                                              <tr>
+                                                <th scope="row">Max Speed</th>
+                                                <td>{{specs.0.h1}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Wheel Size (Front & Rear) Motor Details</th>
+                                                <td>{{specs.0.h2}} </td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Wheel Size (Front & Rear) Motor Details</th>
+                                                <td>{{specs.0.h3}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Front & Rear Brakes Speedometer </th>
+                                                <td>{{specs.0.h4}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Starting System</th>
+                                                <td>{{specs.0.h5}}</td>
+                                            </tr>
+
+
+                                            <tr>
+                                                <th scope="row">Motor Input Voltage Motor Wattage</th>
+                                                <td>{{specs.0.h6}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Batteries</th>
+                                                <td>{{specs.0.h7}}</td>
+                                            </tr>
+
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane" id="suspension" role="tabpanel"
+                                        aria-labelledby="transmission-tab">
+                                        <h3 class="tab-title fut">ACCESSORIES</h3>
+                                        <table class="specifications fut2">
+                                            <tr>
+                                                <th scope="row">First Aid Kit</th>
+                                                <td>{{access.0.h1}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Helmet</th>
+                                                <td>{{access.0.h2}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">ORVM</th>
+                                                <td>{{access.0.h3}}</td>
+                                            </tr>
+
+                                            <tr>
+                                                <th scope="row">Foot mat</th>
+                                                <td>{{access.0.h4}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Battery Clamping Kit</th>
+                                                <td>{{access.0.h5}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Leg Guard set</th>
+                                                <td>{{access.0.h6}}</td>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">Foot rest</th>
+                                                <td>{{access.0.h7}}</td>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                    <div class="tab-pane" id="transmission" role="tabpanel"
+                                        aria-labelledby="suspension-tab">
+                                        <h3 class="tab-title fut">KEY FEATURES</h3>
+                                        <table class="specifications fut2">
+                                             <tr>
+                                                <th scope="row">{{key.0.h1}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">{{key.0.h2}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">{{key.0.h3}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">{{key.0.h4}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">{{key.0.h5}} </th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">{{key.0.h6}}</th>
+                                            </tr>
+                                            <tr>
+                                                <th scope="row">{{key.0.h7}} </th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+       </div>
+    <!--Product Details End-->
+    <!--footer Start-->
+
+
+    <!--footer end-->
+<br>
+
+{% endblock %}
+  <!--Main Wrapper End-->
+  <!-- Vendor -->

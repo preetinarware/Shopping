@@ -1,0 +1,104 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static%}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'style.css' %}">{% endblock %}
+
+
+<div class="main-container">
+    <!-- About Section Start -->
+    <section id="contact" class="contact-section" style="padding-top: 150px;">
+        <div class="section-background m-bg-hide">
+            <div class="background-wrapper">
+                <div class="background-inner"
+                     style="background-image: urls('images/bg-3.png'); background-repeat: no-repeat;background-position: center right; background-size:auto;"></div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="row mt-5">
+                <div class="col-md-12 ">
+                    <div class="heading-wrapper mt-5">
+                        <h3>Change Details</h3>
+
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-7">
+                    <div class="form-wrapper">
+
+                        <form  method="post">
+                            {% csrf_token %}
+                            <div class="form-row">
+                                <div class="form-group col-lg-6 col-sm-6">
+                                    <input type="text" class="form-control" name="Firstname" id="x1"
+                                           placeholder="first Name" value="{{request.user.first_name}}">
+
+                                </div>
+
+                            <div class="form-group col-lg-6 col-sm-6">
+                                <input type="text" class="form-control" name="Lastname" id="x2"
+                                          placeholder="last Name" value="{{request.user.last_name}}">
+
+                            </div></div>
+                            <div class="form-row">
+                            <div class="form-group col-lg-6 col-sm-6">
+                                <input type="text" class="form-control" name="username" id="userName"
+                                       placeholder="User Name">
+                            </div>
+                            <div class="form-group col-lg-6 col-sm-6">
+                                <input type="text" class="form-control" name="Email" id="x3"
+                                       placeholder="email" value="{{request.user.email}}">
+
+                            </div></div>
+                            <div class="form-row">
+                            <div class="form-group col-lg-6 col-sm-6">
+                                <input type="date" class="form-control" name="DOB" id="birthdate"
+                                       placeholder="DOB">
+                            </div>
+                            <div class="form-group col-lg-6 col-sm-6">
+
+                                <input type="number" class="form-control" id="phoneno" name="contact"
+                                       placeholder="Contact Number">
+                            </div></div>
+                            <div class="form-row">
+                            <div class="form-group col-lg-6 col-sm-6">
+
+                                <input type="text" class="form-control" name='Current_add' id="ad1"
+                                       placeholder="Current Address">
+                            </div>
+                            <div class="form-group col-lg-6 col-sm-6">
+
+                                <input type="text" class="form-control" name="Permanant_add" id="ad2"
+                                       placeholder="Permanent Address">
+                            </div></div>
+                            <div class="form-row">
+                            <div class="form-group col-lg-6 col-sm-6">
+
+                                <input type="text" class="form-control" name="gender" id="gendr"
+                                       placeholder="gender">
+                            </div>
+
+                            <div class="form-group col-lg-6 col-sm-6">
+<!--             <label for="formFile" class="form-label"></label>-->
+                                    <input class="form-control" type="file" name="image" id="formFile">
+                            </div>
+                            </div>
+
+                    <div class="form-row">
+                        <div class="form-group col-lg-12">
+                            <a href="/C_pro?blogid={{request.user.id}}"> <input type="submit" value="Send" class="btn btn-primary border-btn"></a>
+                        </div>
+                    </div>
+                    </form>
+
+
+                </div>
+            </div>
+        </div>
+</div>
+</section>
+<!-- About Section End -->
+</div>
+{% endblock %}

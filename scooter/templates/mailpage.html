@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en" xml:lang="en">
+<head><meta charset="UTF-8"><h1> <strong><title>Contact Form</title></strong></h1>
+    <center><h2>Welcome To Mail</h2></center>
+</head><body style="background-color:grey">
+<form method="POST">{% csrf_token%}<table border="2"><tr>
+        Name= {{tite.name}}</tr><br><tr>
+       Email=  {{tite.email}}</tr><br><tr>
+       Contact= {{tite.contact_no}}</tr><br><tr>
+       Subject= {{tite.subject}}</tr><br><tr>
+        Question={{tite.your_ques}}</tr>
+</table>
+</form>
+</body>
+</html>

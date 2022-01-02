@@ -1,0 +1,78 @@
+{% extends 'basic.html' %}
+{% block body %}
+{% load static%}
+
+    {% block style %}<link rel="stylesheet" href="{% static 'style.css' %}">{% endblock %}
+        <!--Header Start -->
+        <!--Header End-->
+        <!-- Content Section Start -->
+
+<form  method="post">
+     {% csrf_token %}
+        <div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto" style="margin-top: 80px;">
+            <div class="card card0 border-0">
+                <div class="row d-flex">
+                    <div class="col-lg-6 d-flex justify-content-center align-items-center">
+
+                        <img src="{% static 'images/h2.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <div class="col-lg-6 my-10   px-5 px-lg-5">
+                        <div class="row px-3 ">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">FullName</h6>
+                            </label>
+                            <input class="mb-4" type="text" name="name" id="name" placeholder="Enter your Full Name">
+                        </div>
+
+                        <div class="row px-3 ">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">First Name</h6>
+                            </label>
+                            <input class="mb-4" type="text" name="fname" id="fname" placeholder="Enter your First Name">
+                        </div>
+
+                         <div class="row px-3 ">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">last Name</h6>
+                            </label>
+                            <input class="mb-4" type="text" name="lname" id="lname" placeholder="Enter your last Name">
+                        </div>
+
+                        <div class="row px-3 ">
+                            <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Email Address</h6>
+                            </label>
+                            <input class="mb-4" type="text" name="email"  id=email placeholder="Enter a valid email address">
+                        </div>
+                        <div class="row px-3"> <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Password</h6>
+                            </label> <input type="password" name="password" id="password" placeholder="Enter password"> </div>
+                        <div class="row px-3"> <label class="mb-1">
+                                <h6 class="mb-0 text-sm">Confirm Password</h6>
+                            </label> <input type="password" name="confirm" id="confirm"  placeholder="Enter Confirm password"> </div>
+
+                        <div class="row px-3 mb-4">
+                            <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1"
+                                    type="checkbox" name="chk" class="custom-control-input"> <label for="chk1"
+                                    class="custom-control-label text-sm">Remember me</label> </div>
+                        </div>
+                        <div class="row mb-3 px-3"> <button type="submit"
+                                class="btn btn-blue text-center" href="/Register" >Register</button> </div>
+                        <div class="row mb-4 px-3"> <small class="font-weight-bold">Have an account? <a
+                                    class="text-danger " href ="/user_login">Login</a></small> </div>
+                    </div>
+                </div>
+            </div>
+          
+        </div>
+
+    <!-- Content Section End -->
+    <!--footer Start-->
+
+    <!--footer end-->
+
+</form>
+    <!--Main Wrapper End-->
+    <!-- Vendor -->
+
+{%endblock%}
